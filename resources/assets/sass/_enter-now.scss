@@ -1,0 +1,86 @@
+.enter {
+    position: relative;
+    @include box-shadow;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-height: 500px;
+    color: $white;
+    margin: 0;
+    @media screen and(min-width: $tablet) {
+        color: $white;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        @media screen and (min-width: 768px) {
+            content: none;
+        }
+    }
+    h1,
+    h2 {
+        text-shadow: $regular-text-shadow;
+        font-size: 1.5rem;
+    }
+    &-capturing {
+        text-shadow: $heading-text-shadow !important;
+        .sun-valley {
+            font-size: 6rem;
+            font-family: $sun-valley;
+            @media screen and (min-width: 1440px) {
+                font-size: 11rem;
+            }
+        }
+        .barrie {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.contest {
+    &-heading {
+        font-size: 3rem;
+    }
+    &-form {
+        max-width: 100%;
+        margin: auto;
+        @media screen and (min-width: 768px) {
+            max-width: 50%;
+        }
+        .form-control-label {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        .form-control-lg,
+        .custom-select-lg,
+        textarea {
+            border-radius: 0 !important;
+            border: 2px solid #ced4da;
+        }
+        #customFile {
+            .custom-file-label {
+                line-height: 1.6;
+                height: calc(2.6875rem + 2px);
+                padding: 0.5rem 1rem;
+                &::after {
+                    content: "Upload Photo";
+                    line-height: 1.8;
+                    height: calc(2.6875rem - 2px);
+                    border-left: 2px solid #ced4da;
+                }
+            }
+        }
+        .btn-submit {
+            padding: 0.5rem 3rem;
+        }
+        .invalid-feedback {
+            font-size: 90%;
+        }
+    }
+}

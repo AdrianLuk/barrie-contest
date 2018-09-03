@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(0, 133, 69, 0.8);
+    height: 60px;
+    &-social {
+        height: 100%;
+    }
+    .logo {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .login {
+        a {
+            margin: 0 20px;
+        }
+    }
+}
